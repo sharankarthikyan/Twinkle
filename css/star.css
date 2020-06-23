@@ -1,0 +1,83 @@
+.star{
+
+   position:relative;
+   height:0px;
+   width:0px;
+   
+   border-right:  100px solid transparent;
+   border-left:   100px solid transparent;
+   
+   transform:    rotate(35deg);
+
+   animation-name: star1;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+}
+
+@keyframes star1{
+   0% {  transform: rotate(0deg);
+         border-bottom: 70px  solid rgb(25, 118, 255);
+   }
+   100% {   transform: rotate(360deg); 
+            border-bottom: 70px  solid rgb(205, 118, 255);
+   }
+}
+
+.star:before{
+   position:absolute;
+   top: -40px;
+   left: -60px;
+   content:"";
+   
+   border-bottom: 80px solid rgb(205, 118, 255) ;
+   border-left: 30px solid transparent;
+   border-right: 30px solid transparent;
+   
+   transform: rotate(-35deg);
+   animation-name: star2;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+}
+
+
+@keyframes star2{
+   0% {  border-bottom: 70px  solid rgb(255, 118, 209);}
+   100% {   border-bottom: 70px  solid rgb(205, 118, 255);}
+}
+
+
+
+.star:after{
+   position:absolute;
+   top: 3px;
+   left: -105px;
+   content:"";
+   
+   border-right: 100px solid transparent;
+   border-bottom: 70px solid rgb(205, 118, 255);
+   border-left: 100px solid transparent;
+   
+   transform: rotate(-70deg);
+   animation-name: star3;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+
+}
+
+@keyframes star3{
+   0% {  border-bottom: 70px  solid rgb(98, 166, 168);}
+   100% {   border-bottom: 70px  solid rgb(205, 118, 255);}
+}
+
+
+
+
+
+
+
+
+
+
+
+html,body{height:100%}body{display:grid;align-items:center;justify-content:center}
+
